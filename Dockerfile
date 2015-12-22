@@ -1,11 +1,11 @@
 FROM linuxserver/baseimage
-MAINTAINER lonix <kylerw@gmail.com>
+MAINTAINER kylerw <kylerw@gmail.com>
 
 
-ENV APTLIST="git nodejs"
+ENV APTLIST="git python g++ nodejs"
 
 # install packages
-RUN curl -sL https://deb.nodesource.com/setup_0.12 | bash - && \
+RUN curl -sL https://deb.nodesource.com/setup_4.x | bash - && \
 apt-get install $APTLIST -qy && \
 
 # clean up 
@@ -22,4 +22,4 @@ usermod -d /app abc
 
 # ports and volumes
 VOLUME /config /storage
-EXPOSE 88 443
+EXPOSE 3000
