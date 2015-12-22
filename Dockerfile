@@ -2,7 +2,7 @@ FROM linuxserver/baseimage
 MAINTAINER lonix <kylerw@gmail.com>
 
 
-ENV APTLIST="nodejs"
+ENV APTLIST="git nodejs"
 
 # install packages
 RUN curl -sL https://deb.nodesource.com/setup_0.12 | bash - && \
