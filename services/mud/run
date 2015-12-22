@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /app/mud
+node /app/mud/app.js
